@@ -6,7 +6,7 @@ A web-based chatbot that scrapes content from any URL, converts it into embeddin
 
 ## 📸 Demo
 
-![screenshot](Screenshots/Screenshot 2025-04-14 003413.png) <!-- Replace with actual image or gif path if available -->
+![Screenshot](Screenshots/Screenshot%202025-04-14%20003413.png)
 
 ---
 
