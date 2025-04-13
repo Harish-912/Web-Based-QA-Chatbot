@@ -35,7 +35,7 @@ A web-based chatbot that scrapes content from any URL, converts it into embeddin
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/web-qa-chatbot.git
+git clone https://github.com/Harish-912/web-qa-chatbot.git
 cd web-qa-chatbot
 ```
 2. Install dependencies
