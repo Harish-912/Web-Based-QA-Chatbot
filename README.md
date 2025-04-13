@@ -37,21 +37,34 @@ A web-based chatbot that scrapes content from any URL, converts it into embeddin
 ```bash
 git clone https://github.com/yourusername/web-qa-chatbot.git
 cd web-qa-chatbot
+```
 2. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 3. Create a .env file in the root directory and add your keys:
+```bash
 GOOGLE_API_KEY=your_google_api_key
 HUGGINGFACE_API_KEY=your_hf_api_key
+```
 4. Run the app
+```bash
 streamlit run app.py
+```
 
-🌐 How to Use
-Enter a valid URL in the input box.
-The app scrapes the content and stores embeddings.
-You can now chat with the bot and ask questions about the page content!
+---
 
-🧪 Limitations / Future Improvements
-Currently supports only basic HTML scraping (JavaScript content not handled)
-Could add PDF/YouTube/Multiple URLs support
-Could integrate OpenAI/Gemini Pro for better accuracy
+## 🌐 How to Use
+
+- Enter a valid URL in the input box.
+- The app scrapes the content and stores embeddings.
+- You can now chat with the bot and ask questions about the page content!
+
+---
+
+## 🧪 Limitations / Future Improvements
+
+- Currently supports only basic HTML scraping (JavaScript content not handled)
+- Could add PDF/YouTube/Multiple URLs support
+- Could integrate OpenAI/Gemini Pro for better accuracy
 
