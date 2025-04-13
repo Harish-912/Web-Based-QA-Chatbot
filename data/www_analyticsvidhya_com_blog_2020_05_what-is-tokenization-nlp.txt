@@ -1,0 +1,382 @@
+Tokenization in NLP : Definition ,Types and Techniques
+Master Generative AI with 10+ Real-world Projects in 2025!
+Reading list
+Introduction to NLP
+Text Pre-processing
+NLP Libraries
+Regular Expressions
+String Similarity
+Spelling Correction
+Topic Modeling
+Text Representation
+Information Retrieval System
+Word Vectors
+Word Senses
+Dependency Parsing
+Language Modeling
+Getting Started with RNN
+Different Variants of RNN
+Machine Translation and Attention
+Self Attention and Transformers
+Transfomers and Pretraining
+Question Answering
+Text Summarization
+Named Entity Recognition
+Coreference Resolution
+Audio Data
+Audio Separation
+Chatbot
+Auto NLP
+What is Tokenization in NLP? Here’s All You Need To Know
+Language is a thing of beauty. But mastering a new language from scratch is quite a daunting prospect. If you’ve ever picked up a language that wasn’t your mother tongue, you’ll relate to this! There are so many layers to peel off and syntaxes to consider – it’s quite a challenge to learn what us tokenization NLP.
+And that’s exactly the way with our machines. In order to get our computer to understand any text, we need to break that word down in a way that our machine can understand. That’s where the concept of tokenization in Natural Language Processing (NLP) comes in. This process involves breaking down the text into smaller units called tokens. What is tokenization in NLP is essential for various NLP tasks like text classification, named entity recognition, and sentiment analysis.
+Simply put, we can’t work with text data if we don’t perform tokenization. Yes, it’s really that important!
+And here’s the intriguing thing about tokenization – it’s notjustabout breaking down the text. Tokenization plays a significant role in dealing with text data. So in this article, we will explore the depths of tokenization in Natural Language Processing and how you can implement it in Python. Also, you will get to know about the what is tokenization and types of tokenization in NLP.
+In this article, you will learn about tokenization in Python, explore a practical tokenization example, and follow a comprehensive tokenization tutorial in NLP. By the end, you’ll have a solid understanding of how to effectively break down text for analysis.
+Learning Objectives:
+I recommend taking some time to go through the below resource if you’re new to NLP:
+Table of contents
+A Quick Rundown of Tokenization
+Tokenization is a common task in Natural Language Processing (NLP). It’s a fundamental step in both traditional NLP methods like Count Vectorizer and Advanced Deep Learning-based architectures likeTransformers.
+Tokens are the building blocks of Natural Language.
+Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Hence, tokenization can be broadly classified into 3 types – word, character, and subword (n-gram characters) tokenization.
+For example, consider the sentence: “Never give up”.
+The most common way of forming tokens is based on space. Assuming space as a delimiter, the tokenization of the sentence results in 3 tokens – Never-give-up. As each token is a word, it becomes an example of Word tokenization.
+Similarly, tokens can be either characters or subwords. For example, let us consider “smarter”:
+But then is this necessary? Do we really need tokenization to do all of this?
+Note: If you are new to NLP, check out ourNLP Course Online
+What is tokenization?
+Tokenization is the process of breaking down a piece of text, like a sentence or a paragraph, into individual words or “tokens.” These tokens are the basic building blocks of language, and tokenization helps computers understand and process human language by splitting it into manageable units.
+For example, tokenizing the sentence “I love ice cream” would result in three tokens: “I,” “love,” and “ice cream.” It’s a fundamental step in natural language processing and text analysis tasks.
+Types of tokenization in nlp
+Here is types of tokenization in nlp:
+The True Reasons behind Tokenization
+As tokens are the building blocks of Natural Language, the most common way of processing the raw text happens at the token level.
+For example, Transformer based models – the State of The Art (SOTA)Deep Learningarchitectures in NLP – process the raw text at the token level. Similarly, the most popular deep learning architectures for NLP like RNN, GRU, and LSTM also process the raw text at the token level.
+As shown here, RNN receives and processes each token at a particular timestep.
+Hence, Tokenization is the foremost step while modeling text data. Tokenization is performed on the corpus to obtain tokens. The following tokens are then used to prepare a vocabulary. Vocabulary refers to the set of unique tokens in the corpus. Remember that vocabulary can be constructed by considering each unique token in the corpus or by considering the top K Frequently Occurring Words.
+Creating Vocabulary is the ultimate goal of Tokenization.
+One of the simplest hacks to boost the performance of the NLP model is to create a vocabulary out of top K frequently occurring words.
+Now, let’s understand the usage of the vocabulary in Traditional and Advanced Deep Learning-based NLP methods.
+Which Tokenization Should you use?
+As discussed earlier, tokenization can be performed on word, character, or subword level. It’s a common question – which Tokenization should we use while solving an NLP task? Let’s address this question here.
+Word Tokenization
+Word Tokenization is the most commonly used tokenization algorithm. It splits a piece of text into individual words based on a certain delimiter. Depending upon delimiters, different word-level tokens are formed.Pretrained Word Embeddingssuch as Word2Vec and GloVe comes under word tokenization.
+But, there are few drawbacks to this.
+Drawbacks of Word Tokenization
+One of the major issues with word tokens is dealing withOut Of Vocabulary (OOV) words. OOV words refer to the new words which are encountered at testing. These new words do not exist in the vocabulary. Hence, these methods fail in handling OOV words.
+But wait – don’t jump to any conclusions yet!
+Another issue with word tokens is connected to the size of the vocabulary. Generally, pre-trained models are trained on a large volume of the text corpus. So, just imagine building the vocabulary with all the unique words in such a large corpus. This explodes the vocabulary!
+This opens the door to Character Tokenization.
+Character Tokenization
+Character Tokenization splits apiece of text into a set of characters. It overcomes the drawbacks we saw above about Word Tokenization.
+Drawbacks of Character Tokenization
+Character tokens solve the OOV problem but the length of the input and output sentences increases rapidly as we are representing a sentence as a sequence of characters. As a result, it becomes challenging to learn the relationship between the characters to form meaningful words.
+This brings us to another tokenization known as Subword Tokenization which is in between a Word and Character tokenization.
+Also Read-What are Categorical Data Encoding Methods
+Tokenization Libraries and Tools in Python
+Python provides several powerful libraries and tools that make it easy to perform tokenization and text preprocessing for natural language processing tasks. Here are some of the most popular ones:
+NLTK (Natural Language Toolkit)
+NLTKis a suite of libraries and programs for symbolic and statistical natural language processing. It includes a wide range of tokenizers for different needs:
+NLTK tokenizers support different token types like words, punctuation, and provide functionality to filter out stopwords.
+spaCy
+spaCyis a popular open-source library for advanced natural language processing in Python. It provides highly efficient tokenization that accounts for linguistic structure and context:
+spaCy’s tokenization forms the base for its advanced NLP capabilities like named entity recognition, part-of-speech tagging, etc.
+Hugging Face Tokenizers
+TheHugging Face Tokenizerslibrary provides access to tokenizers from popular transformer models used for tasks like text generation, summarization, translation, etc. It includes:
+This library allows you to use the same tokenization as pre-trained models, ensuring consistency between tokenization during pre-training andfine-tuning.
+Other Libraries
+There are also tokenization utilities in other Python data science and NLP libraries like:
+The choice of tokenization library depends on the specificNLP task, performance requirements, and whether you need special handling for languages, domains or data types.
+Subword Tokenization
+Subword Tokenization splits the piece of text into subwords (or n-gram characters). For example, words like lower can be segmented as low-er, smartest as smart-est, and so on.
+Transformed based models – the SOTA in NLP – rely on Subword Tokenization algorithms for preparing vocabulary. Now, I will discuss one of the most popular Subword Tokenization algorithm known as Byte Pair Encoding (BPE).
+Welcome to Byte Pair Encoding (BPE)
+Byte Pair Encoding (BPE) is a widely used tokenization method among transformer-based models. BPE addresses the issues of Word and Character Tokenizers:
+BPE is a word segmentation algorithm that merges the most frequently occurring character or character sequences iteratively. Here is a step by step guide to learn BPE.
+Steps to learn BPE
+We will understand the steps with an example.
+Consider a corpus:
+1a) Append the end of the word (say </w>) symbol to every word in the corpus:
+1b) Tokenize words in a corpus into characters:
+2. Initialize the vocabulary:
+Iteration 1:
+3. Compute frequency:
+4. Merge the most frequent pair:
+5. Save the best pair:
+Repeat steps 3-5 for every iteration from now. Let me illustrate for one more iteration.
+Iteration 2:
+After 10 iterations, BPE merge operations looks like:
+Pretty straightforward, right?
+Applying BPE to OOV words
+But, how can we represent the OOV word at test time using BPE learned operations? Any ideas? Let’s answer this question now.
+At test time, the OOV word is split into sequences of characters. Then the learned operations are applied to merge the characters into larger known symbols.
+– Neural Machine Translation of Rare Words with Subword Units, 2016
+Here is a step by step procedure for representing OOV words:
+Let’s see all this in action next!
+Implementing Tokenization – Byte Pair Encoding in Python
+We are now aware of how BPE works – learning and applying to the OOV words. So, its time to implement our knowledge in Python.
+The python code for BPE is already available in the original paper itself (Neural Machine Translation of Rare Words with Subword Units, 2016)
+Reading Corpus
+We’ll consider a simple corpus to illustrate the idea of BPE. Nevertheless, the same idea applies to another corpus as well:
+Text Preparation
+Tokenize the words into characters in the corpus and append </w> at the end of every word:
+Python Code:
+Learning BPE
+Compute the frequency of each word in the corpus:
+Output:
+Let’s define a function to compute the frequency of a pair of character or character sequences. It accepts the corpus and returns the pair with its frequency:
+Now, the next task is to merge the most frequent pair in the corpus. We will define a function that accepts the corpus, best pair, and returns the modified corpus:
+Next, its time to learn BPE operations. As BPE is an iterative procedure, we will carry out and understand the steps for one iteration. Let’s compute the frequency of bigrams:
+Find the most frequent pair:
+Output: (‘e’, ‘s’)
+Finally, merge the best pair and save to the vocabulary:
+We will follow similar steps for certain iterations:
+The most interesting part is yet to come! That’s applying BPE to OOV words.
+Applying BPE to OOV word
+Now, we will see how to segment the OOV word into subwords using learned operations. Consider OOV word to be “lowest”:
+Applying BPE to an OOV word is also an iterative process. We will implement the steps discussed earlier in the article:
+As you can see here, the unknown word “lowest” is segmented as low-est.
+Advanced Tokenization Techniques
+While basic word and character level tokenization are common, there are several advanced tokenization algorithms and methods designed to handle the complexities of natural language:
+Byte-Level Byte-Pair Encoding (BPE)
+An extension of the original BPE, Byte-Level BPE operates on a byte-level rather than character-level. It encodes each token as a sequence of bytes rather than characters. This allows it to:
+Byte-Level BPE is used by models like GPT-2 for text generation.
+SentencePiece Tokenization
+SentencePiece is an advanced tokenization technique that treats text as a sequence of pieces or tokens which can be words, subwords or even characters. It uses language models to dynamically construct a vocabulary based on the input text during training.
+Key features of SentencePiece include:
+SentencePiece tokenization is used in models like T5, ALBERT and XLNet.
+WordPiece Tokenization
+Introduced by Google for their BERT model, WordPiece is a subword tokenization technique that iteratively creates a vocabulary of “wordpieces” – common words and subwords occurring in the training data.
+The WordPiece algorithm starts with a single wordpiece for each character and iteratively:
+This allows representing rare/unknown words as sequences of common wordpieces.
+Unigram Language Model Tokenization
+Used in models like XLNet, this is a data-driven subword tokenization method that creates tokens based on the statistics of the training data. It constructs a vocabulary of tokens (words/subwords) that maximizes the likelihood of the training data.
+Some key aspects are:
+These advanced techniques aim to strike the right balance between vocabulary size and handling rare/unknown words for robust language modeling.
+Conclusion
+Tokenization is a powerful way of dealing with text data. We saw a glimpse of that in this article and also implemented tokenization usingPython. Go ahead and try this out on any text-based dataset you have. The more you practice, the better your understanding of how tokenization works (and why it’s such a critical NLP concept). Feel free to reach out to me in the comments below if you have any queries or thoughts on this article. Hope you like this article and get an exact information for about tokenization and types of tokenization in nlp. We have provide an exact informat for the tokenization related topic.
+Hope you like the article! You will understand what tokenization in NLP is, how tokenization NLP works, and the role of a tokenizer in processing language data effectively.
+Key Takeaways:
+Frequently Asked Questions
+A. Tokenization in NLP divides text into meaningful units called tokens. For example, tokenizing the sentence “I love reading books” results in tokens: [“I”, “love”, “reading”, “books”].
+A. Tokenization is the process of breaking down text into smaller units called tokens, which are usually words or subwords. It’s a fundamental step in NLP for tasks like text processing and analysis.
+A. Tokenization splits text into smaller parts like words or sentences. Example:Text:“I love NLP.”Tokens:[“I”, “love”, “NLP”, “.”]
+A. No, but it is essential for most NLP tasks. It helps process text by breaking it into meaningful parts.
+Tokenization is used to simplify text analysis by splitting it into smaller units, making it easier for machines to understand and process.
+Aravind Pai is passionate about building data-driven products for the sports domain. He strongly believes that Sports Analytics is a Game Changer.
+Login to continue reading and enjoy expert-curated content.
+Free Courses
+Generative AI - A Way of Life
+Explore Generative AI for beginners: create text and images, use top AI tools, learn practical skills, and ethics.
+Getting Started with Large Language Models
+Master Large Language Models (LLMs) with this course, offering clear guidance in NLP and model training made simple.
+Building LLM Applications using Prompt Engineering
+This free course guides you on building LLM apps, mastering prompt engineering, and developing chatbots with enterprise data.
+Improving Real World RAG Systems: Key Challenges & Practical Solutions
+Explore practical solutions, advanced retrieval strategies, and agentic RAG systems to improve context, relevance, and accuracy in AI-driven applications.
+Microsoft Excel: Formulas & Functions
+Master MS Excel for data analysis with key formulas, functions, and LookUp tools in this comprehensive course.
+Recommended Articles
+Stemming vs Lemmatization in NLP: Must-Know Dif...
+What Are N-Grams and How to Implement Them in P...
+How to Get Started with NLP – 6 Unique Me...
+Introduction to Natural Language Processing and...
+How to Build a GPT Tokenizer?
+A Comprehensive Guide for Interview Questions o...
+Guide for Tokenization in a Nutshell – To...
+Hugging Face Releases New NLP ‘Tokenizers...
+Part 3: Step by Step Guide to NLP – Text ...
+Tokenization and Text Normalization
+Responses From Readers
+It would be good if you also provide a link to download the "sample.txt" file.
+Hi, Download the sample corpus fromhere
+Hi. Thanks for the wonderful posting.
+May I translate this article into Korean and post it? I will clarify that I just translate it and URL of original post and the author's name.
+Hi. I want to know what I should choose between subword tokenization and character-level tokenization. Which one is SOTA?
+Comments are Closed
+Write for us
+Write, captivate, and earn accolades and rewards for your work
+We use cookies essential for this site to function well. Please click to help us improve its usefulness with additional cookies. Learn about our use of cookies in ourPrivacy Policy&Cookies Policy.
+Show details
+Powered By
+Cookies
+This site uses cookies to ensure that you get the best experience possible. To learn more about how we use cookies, please refer to ourPrivacy Policy&Cookies Policy.
+Necessary (2)Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.
+Necessary (2)
+Necessary cookies help make a website usable by enabling basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.
+Analytics Vidhya (4)learn more about analytics vidhya privacy
+Analytics Vidhya (4)
+brahmaid
+It is needed for personalizing the website.
+Expiry: Session
+Type: HTTP
+csrftoken
+This cookie is used to prevent Cross-site request forgery (often abbreviated as CSRF) attacks of the website
+Type: HTTPS
+Identityid
+Preserves the login/logout state of users across the whole site.
+sessionid
+Preserves users' states across page requests.
+Google (1)learn more about google privacy
+Google (1)
+g_state
+Google One-Tap login adds this g_state cookie to set the user status on how they interact with the One-Tap modal.
+Expiry: 365 days
+Statistics (4)Statistic cookies help website owners to understand how visitors interact with websites by collecting and reporting information anonymously.
+Statistics (4)
+Statistic cookies help website owners to understand how visitors interact with websites by collecting and reporting information anonymously.
+Microsoft (7)learn more about microsoft policy
+Microsoft (7)
+MUID
+Used by Microsoft Clarity, to store and track visits across websites.
+Expiry: 1 Year
+_clck
+Used by Microsoft Clarity, Persists the Clarity User ID and preferences, unique to that site, on the browser. This ensures that behavior in subsequent visits to the same site will be attributed to the same user ID.
+_clsk
+Used by Microsoft Clarity, Connects multiple page views by a user into a single Clarity session recording.
+Expiry: 1 Day
+SRM_I
+Collects user data is specifically adapted to the user or device. The user can also be followed outside of the loaded website, creating a picture of the visitor's behavior.
+Expiry: 2 Years
+Use to measure the use of the website for internal analytics
+Expiry: 1 Years
+CLID
+The cookie is set by embedded Microsoft Clarity scripts. The purpose of this cookie is for heatmap and session recording.
+SRM_B
+Collected user data is specifically adapted to the user or device. The user can also be followed outside of the loaded website, creating a picture of the visitor's behavior.
+Expiry: 2 Months
+Google (7)learn more about google privacy
+Google (7)
+_gid
+This cookie is installed by Google Analytics. The cookie is used to store information of how visitors use a website and helps in creating an analytics report of how the website is doing. The data collected includes the number of visitors, the source where they have come from, and the pages visited in an anonymous form.
+Expiry: 399 Days
+_ga_#
+Used by Google Analytics, to store and count pageviews.
+_gat_#
+Used by Google Analytics to collect data on the number of times a user has visited the website as well as dates for the first and most recent visit.
+collect
+Used to send data to Google Analytics about the visitor's device and behavior. Tracks the visitor across devices and marketing channels.
+Type: PIXEL
+cookies ensure that requests within a browsing session are made by the user, and not by other sites.
+Expiry: 6 Months
+G_ENABLED_IDPS
+use the cookie when customers want to make a referral from their gmail contacts; it helps auth the gmail account.
+test_cookie
+This cookie is set by DoubleClick (which is owned by Google) to determine if the website visitor's browser supports cookies.
+Webengage (2)Learn more about webengage privacy
+Webengage (2)
+_we_us
+this is used to send push notification using webengage.
+WebKlipperAuth
+used by webenage to track auth of webenagage.
+LinkedIn (16)learn more about linkedin privacy
+LinkedIn (16)
+ln_or
+Linkedin sets this cookie to registers statistical data on users' behavior on the website for internal analytics.
+JSESSIONID
+Use to maintain an anonymous user session by the server.
+li_rm
+Used as part of the LinkedIn Remember Me feature and is set when a user clicks Remember Me on the device to make it easier for him or her to sign in to that device.
+AnalyticsSyncHistory
+Used to store information about the time a sync with the lms_analytics cookie took place for users in the Designated Countries.
+lms_analytics
+Used to store information about the time a sync with the AnalyticsSyncHistory cookie took place for users in the Designated Countries.
+liap
+Cookie used for Sign-in with Linkedin and/or to allow for the Linkedin follow feature.
+visit
+allow for the Linkedin follow feature.
+li_at
+often used to identify you, including your name, interests, and previous activity.
+s_plt
+Tracks the time that the previous page took to load
+lang
+Used to remember a user's language setting to ensure LinkedIn.com displays in the language selected by the user in their settings
+s_tp
+Tracks percent of page viewed
+AMCV_14215E3D5995C57C0A495C55%40AdobeOrg
+Indicates the start of a session for Adobe Experience Cloud
+s_pltp
+Provides page name value (URL) for use by Adobe Analytics
+s_tslv
+Used to retain and fetch time since last visit in Adobe Analytics
+li_theme
+Remembers a user's display preference/theme setting
+li_theme_set
+Remembers which users have updated their display / theme preferences
+Preferences (0)Preference cookies enable a website to remember information that changes the way the website behaves or looks, like your preferred language or the region that you are in.
+Preferences (0)
+Preference cookies enable a website to remember information that changes the way the website behaves or looks, like your preferred language or the region that you are in.
+Marketing (4)Marketing cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.
+Marketing (4)
+Marketing cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user and thereby more valuable for publishers and third party advertisers.
+Google (11)learn more about google privacy
+Google (11)
+_gcl_au
+Used by Google Adsense, to store and track conversions.
+Expiry: 3 Months
+Save certain preferences, for example the number of search results per page or activation of the SafeSearch Filter. Adjusts the ads that appear in Google Search.
+SAPISID
+__Secure-#
+APISID
+SSID
+HSID
+These cookies are used for the purpose of targeted advertising.
+Expiry: 6 Hours
+Expiry: 1 Month
+1P_JAR
+These cookies are used to gather website statistics, and track conversion rates.
+Aggregate analysis of website visitors
+Facebook (2)learn more about facebook privacy
+Facebook (2)
+_fbp
+This cookie is set by Facebook to deliver advertisements when they are on Facebook or a digital platform powered by Facebook advertising after visiting this website.
+Expiry: 4 Months
+Contains a unique browser and user ID, used for targeted advertising.
+LinkedIn (6)Learn about linkedin policy
+LinkedIn (6)
+bscookie
+Used by LinkedIn to track the use of embedded services.
+lidc
+Used by LinkedIn for tracking the use of embedded services.
+bcookie
+aam_uuid
+Use these cookies to assign a unique ID when users visit a website.
+UserMatchHistory
+These cookies are set by LinkedIn for advertising purposes, including: tracking visitors so that more relevant ads can be presented, allowing users to use the 'Apply with LinkedIn' or the 'Sign-in with LinkedIn' functions, collecting information about how visitors use the site, etc.
+li_sugr
+Used to make a probabilistic match of a user's identity outside the Designated Countries
+Expiry: 90 Days
+Microsoft (2)Learn more about microsoft privacy.
+Microsoft (2)
+Used to collect information for analytics purposes.
+Expiry: 1 year
+ANONCHK
+Used to store session ID for a users session to ensure that clicks from adverts on the Bing search engine are verified for reporting purposes and for personalisation
+UnclassNameified (0)UnclassNameified cookies are cookies that we are in the process of classNameifying, together with the providers of individual cookies.
+UnclassNameified (0)
+UnclassNameified cookies are cookies that we are in the process of classNameifying, together with the providers of individual cookies.
+Cookie declaration last updated on 24/03/2023 by Analytics Vidhya.
+Cookies are small text files that can be used by websites to make a user's experience more efficient. The law states that we can store cookies on your device if they are strictly necessary for the operation of this site. For all other types of cookies, we need your permission. This site uses different types of cookies. Some cookies are placed by third-party services that appear on our pages. Learn more about who we are, how you can contact us, and how we process personal data in ourPrivacy Policy.
+Flagship Courses
+Popular Categories
+Generative AI Tools and Techniques
+Popular GenAI Models
+Data Science Tools and Techniques
+Company
+Discover
+Learn
+Engage
+Contribute
+Enterprise
+Terms & conditionsRefund PolicyPrivacy PolicyCookies Policy© Analytics Vidhya 2025.All rights reserved.
+DeepSeek from Scratch
+IntermediateLevel
+1 hourDuration
+Continue your learning for FREE
+Enter email address to continue
+Enter OTP sent to
+Edit
+Enter the OTP
+Resend OTP
+Resend OTP in45s

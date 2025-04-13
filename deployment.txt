@@ -1,0 +1,27 @@
+- Login to AWS
+- Go to EC2 dashboard
+- Click "Launch Instance"
+- Name Instance
+- Choose "Machine Image" (Ubuntu Server 22.04 LTS (recommended for Docker))
+- Choose "Instance type"
+- Create key-pair login and download .pem file Change permission to chmod 400 (Only user has full access control)
+- Network settings:-
+    - Allow SSH (port 22) 
+    - Allow HTTP (port 80) and custom TCP 8501 (for streamlit)
+- Now connect to instance using .pem key and public ip.
+
+Run these commands:
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+
+Use below command to copy your folder to Ec2 instance
+scp -i your-key.pem -r myproject ubuntu@your-ec2-ip:/home/ubuntu/
+
+- Create a file name dockerfile in project folder
+- Build a docker container using: docker build -t streamlit-app .
+- Run docker file using: docker run -p 8501:8501 streamlit-app
+
+

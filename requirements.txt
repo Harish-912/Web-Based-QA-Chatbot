@@ -1,0 +1,11 @@
+bs4
+requests
+undetected-chromedriver
+langchain
+python-dotenv
+langchain_community
+faiss-cpu
+langgraph
+langchain_google_genai
+langchain-core
+streamlit
